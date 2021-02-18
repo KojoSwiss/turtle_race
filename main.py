@@ -27,10 +27,12 @@ while is_race_on:
         if turtle.xcor() > 230:
             is_race_on = False
             winner = turtle.pencolor()
+
             if winner == user_bet:
-                print(f"You have win, {winner} turtle has won the race")
+                screen.title(f"{winner.upper} wins the race")
             else:
-                print(f"You have lost!, The {winner} turtle won ")
+                screen.title(f"You have lost!, The {winner} turtle won ")
+
 
         rand_dist = random.randint(0, 10)
         turtle.forward(rand_dist)
